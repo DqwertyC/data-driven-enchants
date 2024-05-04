@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "example": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "rewards": {
+        "function": "custom:reward/delight"
+    }
+}

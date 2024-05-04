@@ -1,0 +1,30 @@
+{
+    "function": "set_components",
+    "components": {
+        "minecraft:custom_data": {
+            "excavation": true
+        },
+        "minecraft:tool": {
+            "default_mining_speed": 1,
+            "damage_per_block": 1,
+            "rules": [
+                {
+                    "blocks": [
+                        "minecraft:stone",
+                        "minecraft:deepslate",
+                        "minecraft:end_stone",
+                        "minecraft:netherrack",
+                        "minecraft:obsidian"
+                    ],
+                    "speed": 40,
+                    "correct_for_drops": true
+                },
+                {
+                    "blocks": "#mineable/pickaxe",
+                    "speed": 1,
+                    "correct_for_drops": true
+                }
+            ]
+        }
+    }
+}

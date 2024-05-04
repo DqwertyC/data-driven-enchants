@@ -1,0 +1,63 @@
+{
+    "anvil_cost": 4,
+    "description": "Illumination",
+    "effects": {
+        "minecraft:tick": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "custom:light"
+                }
+            },
+            {
+                "effect": {
+                    "type": "minecraft:replace_disc",
+                    "block_state": {
+                        "type": "minecraft:simple_state_provider",
+                        "state": {
+                            "Name": "minecraft:light",
+                            "Properties": {
+                                "level": "15"
+                            }
+                        }
+                    },
+                    "height": 1.0,
+                    "predicate": {
+                        "type": "minecraft:all_of",
+                        "predicates": [
+                            {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "minecraft:air"
+                            }
+                        ]
+                    },
+                    "radius": {
+                        "type": "minecraft:clamped",
+                        "max": 6.0,
+                        "min": 1.0,
+                        "value": {
+                            "type": "minecraft:linear",
+                            "base": 2.0,
+                            "per_level_above_first": 2.0
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "max_cost": {
+        "base": 65,
+        "per_level_above_first": 9
+    },
+    "max_level": 3,
+    "min_cost": {
+        "base": 15,
+        "per_level_above_first": 9
+    },
+    "slots": [
+        "head"
+    ],
+    "supported_items": "#minecraft:head_armor",
+    "primary_items": "#minecraft:head_armor",
+    "weight": 2
+}

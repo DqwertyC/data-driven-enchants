@@ -1,0 +1,46 @@
+{
+    "anvil_cost": 4,
+    "description": "Flotation",
+    "effects": {
+      "minecraft:attributes": [
+        {
+          "amount": {
+            "type":"minecraft:clamped",
+            "value":
+            {
+  
+              "type": "minecraft:fraction",
+              "numerator":{
+                "type":"minecraft:linear",
+                "base":-1,
+                "per_level_above_first": -1.0
+    
+              },
+              "denominator":4
+            },
+            "min":-0.9,
+            "max":0.0
+          },
+          "attribute": "minecraft:generic.gravity",
+          "name": "enchantment.flotation",
+          "operation": "add_multiplied_base",
+          "uuid": "0000104d-0000-0000-0000-000000000001"
+        }
+      ]
+    },
+    "max_cost": {
+      "base": 65,
+      "per_level_above_first": 9
+    },
+    "max_level": 3,
+    "min_cost": {
+      "base": 15,
+      "per_level_above_first": 9
+    },
+    "slots": [
+      "chest"
+    ],
+    "supported_items": "minecraft:elytra",
+    "primary_items": "minecraft:elytra",
+    "weight": 2
+  }

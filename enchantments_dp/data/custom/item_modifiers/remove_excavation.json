@@ -1,0 +1,9 @@
+{
+    "function": "set_components",
+    "components": {
+        "minecraft:custom_data": {
+            "excavation": false
+        },
+        "!minecraft:tool": {}
+    }
+}

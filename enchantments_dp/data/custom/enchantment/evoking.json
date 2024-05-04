@@ -1,0 +1,63 @@
+{
+    "anvil_cost": 4,
+    "description": "Evoking",
+    "effects": {
+      "minecraft:hit_block": [
+        {
+          "effect": {
+            "type": "minecraft:all_of",
+            "effects": [
+              {
+                "type": "minecraft:run_function",
+                "function": "custom:summon_fangs"
+              }
+            ]
+          }
+        }
+      ],
+      "minecraft:post_attack": [
+        {
+          "affected": "victim",
+          "effect": {
+            "type": "minecraft:all_of",
+            "effects": [
+              {
+                "type": "minecraft:run_function",
+                "function": "custom:summon_fangs"
+              }
+            ]
+          },
+          "enchanted": "attacker",
+          "requirements": {
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "flags": {
+                    "is_on_ground": true
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "max_cost": {
+      "base": 51,
+      "per_level_above_first": 10
+    },
+    "max_level": 1,
+    "min_cost": {
+      "base": 21,
+      "per_level_above_first": 10
+    },
+    "slots": [
+      "mainhand"
+    ],
+    "supported_items": "#minecraft:enchantable/crossbow",
+    "primary_items": "#minecraft:enchantable/crossbow",
+    "weight": 2
+  }
